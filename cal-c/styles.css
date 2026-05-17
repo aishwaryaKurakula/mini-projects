@@ -1,0 +1,216 @@
+:root {
+  --bg-top: #eff6ff;
+  --bg-bottom: #dbeafe;
+  --panel: #f8fbff;
+  --panel-border: #cbdcfb;
+  --text: #0f172a;
+  --muted: #5b6b86;
+  --key: #ffffff;
+  --key-border: #dbe5f5;
+  --key-hover: #eff6ff;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: #dbeafe;
+  --shadow: 0 28px 60px rgba(37, 99, 235, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.2), transparent 28%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-bottom));
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.calculator {
+  width: min(100%, 460px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(244, 249, 255, 0.96));
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.topbar h1 {
+  margin-top: 6px;
+  font-size: 1.4rem;
+}
+
+.mode-toggle {
+  border: 1px solid #bfd3fb;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.screen {
+  margin-top: 16px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 22px;
+  padding: 14px 16px;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.history {
+  color: var(--muted);
+  min-height: 22px;
+  text-align: right;
+  font-size: 0.92rem;
+  word-break: break-word;
+}
+
+.display {
+  margin-top: 6px;
+  text-align: right;
+  font-size: clamp(1.75rem, 6vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.15;
+  word-break: break-all;
+}
+
+.keypad {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 9px;
+}
+
+.key {
+  min-height: 50px;
+  border: 1px solid var(--key-border);
+  background: var(--key);
+  color: var(--text);
+  border-radius: 15px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.key:hover {
+  background: var(--key-hover);
+  border-color: #bfd3fb;
+}
+
+.key:active {
+  transform: translateY(1px);
+}
+
+.key-fn,
+.key-muted {
+  background: #eef4ff;
+  color: #24446f;
+}
+
+.key-accent {
+  background: #e0edff;
+  color: var(--accent-strong);
+}
+
+.key-action {
+  background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+  color: #fff;
+  border-color: transparent;
+}
+
+.key-wide {
+  grid-column: span 2;
+}
+
+.key-tall {
+  grid-row: span 2;
+}
+
+@media (max-width: 520px) {
+  .calculator {
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .keypad {
+    gap: 8px;
+  }
+
+  .key {
+    min-height: 46px;
+    border-radius: 14px;
+    font-size: 0.9rem;
+  }
+
+  .topbar h1 {
+    font-size: 1.18rem;
+  }
+
+  .mode-toggle {
+    padding: 8px 12px;
+  }
+
+  .screen {
+    min-height: 100px;
+  }
+
+  .display {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+  }
+}
+
+@media (max-height: 760px) {
+  .app-shell {
+    padding: 10px;
+  }
+
+  .calculator {
+    padding: 14px;
+  }
+
+  .screen {
+    min-height: 92px;
+    padding: 12px 14px;
+  }
+
+  .keypad {
+    gap: 7px;
+  }
+
+  .key {
+    min-height: 42px;
+    border-radius: 12px;
+    font-size: 0.88rem;
+  }
+}
