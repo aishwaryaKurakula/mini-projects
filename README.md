@@ -19,7 +19,7 @@ Small front-end projects collected in one repository.
 
 ### To-Do App
 
-![To-Do App](./screenshots/to-do-app.png)
+![To-Do App](./screenshots/to-do.png)
 
 ### Countdown Stopwatch
 
