@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+body {
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a0033 0%, #2d1b4e 50%, #0f0015 100%);
+  color: #ffffff;
+}
+.container {
+  border: 1px solid #6a4c93;
+  border-radius: 15px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(45, 27, 78, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  
+}
+container h1 {
+  font-size: 1.4rem;
+  margin-block: 8px;
+}
+
+.inputBox{
+  position: relative;
+}
+
+.inputBox span{
+  position:absolute;
+  top:16px;
+  right:6px;
+  color:#a78bcd;
+  font-size:28px;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.inputBox span:hover {
+  transform: scale(1.1);
+  color: #d4a5ff;
+}
+
+.passBox {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #6a4c93;
+  outline: none;
+  padding: 12px;
+  width: 300px;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-block: 15px;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+  color: #ffffff;
+}
+
+.passBox:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #a78bcd;
+  box-shadow: 0 0 12px rgba(106, 76, 147, 0.3);
+}
+
+.row {
+  display: flex;
+  margin-block: 14px;
+  align-items: center;
+}
+.row p, .row label{
+  flex-basis: 100%;
+  font-size: 16px;
+  color: #e0d4f7;
+}
+
+.row input[type="checkbox"]{
+  width: 20px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #a78bcd;
+}
+.slider-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 10px;
+}
+#lengthSlider{
+  width: 80%;
+  height: 6px;
+  cursor: pointer;
+  accent-color: #a78bcd;
+}
+
+#lengthValue{
+  font-weight: bold;
+  font-size: 18px;
+  min-width: 40px;
+  color: #a78bcd;
+}
+
+.strengthIndicator {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#strengthLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e0d4f7;
+}
+
+.strengthBar {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #ecf0f1;
+  transition: all 0.3s ease;
+}
+
+.strengthBar.weak {
+  background-color: #e74c3c;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+}
+
+.strengthBar.medium {
+  background-color: #f39c12;
+  box-shadow: 0 0 10px rgba(243, 156, 18, 0.3);
+}
+
+.strengthBar.strong {
+  background-color: #27ae60;
+  box-shadow: 0 0 10px rgba(39, 174, 96, 0.3);
+}
+
+.btn{
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6a4c93 0%, #8b6bb1 100%);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 76, 147, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #8b6bb1 0%, #a78bcd 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 76, 147, 0.6);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(106, 76, 147, 0.4);
+}
+}
