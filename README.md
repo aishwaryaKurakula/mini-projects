@@ -33,6 +33,3 @@ Small front-end projects collected in one repository.
 
 ![Cal-C](./screenshots/cal-c.png)
 
-## Notes
-
-- `password-generator` is included in the repo but does not have a screenshot added yet.
